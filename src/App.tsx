@@ -1,28 +1,14 @@
 import s from "./App.module.css";
-import { useAppDispatch, useAppSelector } from "./lib/hooks";
-import { useEffect } from "react";
-import { fetchNews } from "./store/features/news/newsSlice";
+import NewsList from "./components/NewsList";
 
 function App() {
-  const dispatch = useAppDispatch();
-  const news = useAppSelector((state) => state.news.news);
-
-  useEffect(() => {
-    dispatch(fetchNews());
-    const interval = setInterval(() => {
-      dispatch(fetchNews());
-    }, 60000);
-    return () => clearInterval(interval);
-  }, [dispatch]);
-
   return (
-    <div>
-      <h1>Hacker News</h1>
-      <div>
-        {news.map((n) => (
-          <div key={n.id}>{n.title}</div>
-        ))}
+    <div className={s.container}>
+      <div className={s.header}>
+        <img src="/hackerLogo.jpg" alt="hacker" className={s.logo}/>
+        <h1>Hacker News</h1>
       </div>
+      <NewsList />
     </div>
   );
 }

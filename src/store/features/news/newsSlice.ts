@@ -1,18 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-type NewsItem = {
-  id: number;
-  title: string;
-  author: string;
-  score: number;
-  url: string;
-  time: number;
-  comments: string[];
-};
+import { NewsItemType } from "../../../lib/types";
 
 type NewsState = {
-  news: NewsItem[];
+  news: NewsItemType[];
   loading: boolean;
 };
 
