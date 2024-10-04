@@ -30,7 +30,7 @@ const NewsItem = (props: { news: NewsItemType }) => {
             </Typography>
             <div style={{ display: "flex", gap: "10px" }}>
               <Typography component="span" variant="subtitle2">
-                Comments: {props.news.score}
+                Score: {props.news.score}
               </Typography>
               <Typography component="span" variant="subtitle2">
                 Time: {props.news.time}

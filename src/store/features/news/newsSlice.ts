@@ -23,7 +23,8 @@ export const fetchNews = createAsyncThunk("news/fetchNews", async () => {
     )
   );
   const news = await Promise.all(newsPromises);
-  return news.map((item) => item.data);
+
+  return news.map((item) => item.data).sort((a, b) => b.time - a.time);
 });
 
 const newsSlice = createSlice({
