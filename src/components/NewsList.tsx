@@ -31,8 +31,8 @@ export default function NewsList() {
         borderRadius: "8px",
         boxShadow: 3,
         width: "100%",
-        minWidth: "600px",
-        minHeight: "872px",
+        minWidth: { xs: "250px", sm: "300px", md: "500px", lg: "1000px" },
+        minHeight: "930px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -42,7 +42,7 @@ export default function NewsList() {
       {loading ? (
         <CircularProgress
           sx={{
-            marginTop: { xs: "220px", sm: "250px", md: "300px", lg: "380px" },
+            marginTop: { xs: "100px", sm: "250px", md: "300px", lg: "380px" },
           }}
         />
       ) : (

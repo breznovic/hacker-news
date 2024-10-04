@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { NewsItemType } from "../../../lib/types";
 
+
 type NewsState = {
   news: NewsItemType[];
   loading: boolean;

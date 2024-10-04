@@ -1,16 +1,15 @@
-import s from "./App.module.css";
+import Box from "@mui/material/Box/Box";
 import NewsList from "./components/NewsList";
 
 function App() {
   return (
-    <div className={s.container}>
-      <div className={s.header}>
-        <img src="/hackerLogo.jpg" alt="hacker" className={s.logo}/>
-        <h1>Hacker News</h1>
-      </div>
+    <Box sx={{marginTop: "20px"}}>
       <NewsList />
-    </div>
+    </Box>
   );
 }
 
 export default App;
+
+
+

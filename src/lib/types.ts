@@ -5,5 +5,14 @@ export type NewsItemType = {
   score: number;
   url: string;
   time: number;
-  comments: string[];
+  kids: string[];
+};
+
+export type Comment = {
+  id: number;
+  text: string;
+  by: string;
+  time: number;
+  kids?: string[];
+  nested?: Comment[];
 };
